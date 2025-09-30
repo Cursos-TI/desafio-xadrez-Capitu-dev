@@ -44,6 +44,30 @@ int main() {
 
     printf("\n");
 
+    printf("\n");
+
+    // -------------------------------
+    // Movimento do Cavalo (loops aninhados)
+    // -------------------------------
+    int passosBaixo = 2;
+    int passosEsquerda = 1;
+
+    printf("Movimento do Cavalo:\n");
+
+    // Loop externo: controla os 2 passos para baixo (for obrigatório)
+    for (int x = 1; x <= passosBaixo; x++) {
+        printf("Baixo\n");
+
+        // Loop interno: controla o 1 passo para a esquerda (while)
+        int y = 1;
+        while (y <= passosEsquerda) {
+            if (x == passosBaixo) { // só anda para esquerda depois de terminar os dois "Baixo"
+                printf("Esquerda\n");
+            }
+            y++;
+        }
+    }
+
 
     return 0;
 }
